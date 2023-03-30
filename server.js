@@ -2,7 +2,6 @@ var express = require("express")
 const res = require("express/lib/response");
 var app = express();
 
-
 app.use(express.urlencoded({extends: false}));
 app.use(express.json());
 app.use(express.static(__dirname+'/public'))
