@@ -1,5 +1,3 @@
-
-
 var express = require("express")
 var app = express()
 var cors = require ('cors')
@@ -10,13 +8,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors())
 
-
 //mongo db connection..
-
 const Mongoclient = require ('mongodb').MongoClient;
 
 //database conn
-const uri = 'mongodb+srv://aman:aman@cluster0.kqd3owj.mongodb.net/?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://sajibmitra3:admin@sajibmitra.osjuz0u.mongodb.net/?retryWrites=true&w=majority'
 const client = new Mongoclient (uri, {useNewUrlParser: true})
 
 
@@ -28,8 +24,6 @@ const insertProjects = (project,callback) => {
 const getProjects =(callback) =>{
     projectCollection.find({}).toArray(callback);
 }
-
-
 
 const createCollection = (collectionName) => {
     client.connect((err,db) => {
