@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 const {MongoClient} = require('mongodb');
-const uri = 'mongodb+srv://sajibmitra3:admin@sajibmitra.osjuz0u.mongodb.net/?retryWrites=true&w=majority';
+const uri = 'mongodb+srv://shivarathi:admin@shivarathi.osjuz0u.mongodb.net/?retryWrites=true&w=majority';
 const client = new MongoClient(uri);
 let dbCollection;
 
